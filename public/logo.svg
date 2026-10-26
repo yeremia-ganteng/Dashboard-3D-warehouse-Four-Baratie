@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <circle cx="256" cy="256" r="256" fill="#111"/>
+  <circle cx="256" cy="256" r="232" fill="none" stroke="#B07A3A" stroke-width="4"/>
+  <text x="256" y="238" text-anchor="middle" font-family="Georgia,serif" font-size="78" font-weight="700" fill="#F8F1E7" letter-spacing="6">FOUR É</text>
+  <text x="256" y="320" text-anchor="middle" font-family="Georgia,serif" font-size="62" fill="#B07A3A" letter-spacing="8">BARATIE</text>
+</svg>

@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ✅ FIX: Ganti height 100% jadi 100vh + tambah overflow hidden */
+html, body, #root {
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+body {
+  @apply bg-cream text-ink font-sans antialiased;
+  overscroll-behavior: none;
+}
+
+.card {
+  @apply bg-white/80 rounded-card shadow-card border border-gold/20;
+}
+
+.pill {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-4 min-h-[44px] min-w-[44px] text-sm font-semibold transition-colors disabled:opacity-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marun;
+}
+
+.pill-primary {
+  @apply bg-marun text-cream hover:bg-[#561519];
+}
+
+.pill-ghost {
+  @apply bg-cream/95 text-ink border border-gold/40 hover:bg-cream-2;
+}
+
+.pill-active {
+  @apply bg-ink text-cream;
+}
+
+.input {
+  @apply w-full min-h-[44px] rounded-xl border border-gold/50 bg-white px-3 text-sm;
+}
+
+/* Label melayang di atas rak (DOM overlay, selalu menghadap kamera) */
+.flabel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  border: 1px solid;
+  font: 600 10px/1.15 Inter, system-ui, sans-serif;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
+  user-select: none;
+}
+
+.flabel b {
+  font-size: 11px;
+}
+
+.flabel-ok {
+  background: #E3F1E1;
+  color: #1E5B2A;
+  border-color: #8CC08C;
+}
+
+.flabel-low {
+  background: #FFF0D1;
+  color: #7A4A00;
+  border-color: #E09A3A;
+  animation: pulse 1.8s ease-in-out infinite;
+}
+
+.flabel-empty {
+  background: #6B1F23;
+  color: #fff;
+  border-color: #3d0f11;
+}
+
+.zonetag {
+  font: 600 11px Inter, sans-serif;
+  letter-spacing: .18em;
+  color: #8A5B22;
+  border: 1px solid #B07A3A;
+  border-radius: 999px;
+  padding: 3px 10px;
+  background: rgba(248, 241, 231, .9);
+  white-space: nowrap;
+}
+
+.lockbadge {
+  font: 600 12px Inter, sans-serif;
+  background: #111;
+  color: #F8F1E7;
+  padding: 8px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.vantag {
+  font: 600 11px/1 Inter, system-ui, sans-serif;
+  background: #111;
+  color: #F8F1E7;
+  border: 1px solid #B07A3A;
+  border-radius: 999px;
+  padding: 5px 10px;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .25);
+}
+
+.saybubble {
+  font: 600 11px/1.25 Inter, system-ui, sans-serif;
+  background: #fff;
+  color: #111;
+  border: 1px solid #B07A3A;
+  border-radius: 12px;
+  padding: 4px 9px;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(224, 154, 43, .55); }
+  50% { box-shadow: 0 0 0 7px rgba(224, 154, 43, 0); }
+}
+
+@keyframes load {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+/* Hormati prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .flabel-low {
+    animation: none;
+  }
+  .animate-\[load_1\.2s_ease-in-out_infinite\] {
+    animation: none;
+  }
+  /* ✅ FIX: tambah selector * di sini */
+  * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}

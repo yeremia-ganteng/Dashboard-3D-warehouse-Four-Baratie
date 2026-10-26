@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "version": 1,
+    "label": "DATA DEMO",
+    "note": "Semua angka stok, penjualan, dan riwayat di file ini adalah data simulasi untuk contoh tampilan, bukan data bisnis nyata."
+  },
+  "users": [
+    { "id": "u-owner", "name": "Owner (demo)", "role": "owner", "pin": "1111" },
+    { "id": "u-outlet", "name": "Staf Outlet (demo)", "role": "staf_outlet", "pin": "2222" },
+    { "id": "u-produksi", "name": "Staf Produksi (demo)", "role": "staf_produksi", "pin": "3333" }
+  ],
+  "items": [
+    { "id": "banana-cake", "name": "Banana Cake", "kind": "roti", "unit": "pcs", "price": 5000, "shape": "tray", "color": "#D9A441" },
+    { "id": "coffee-bun", "name": "Coffee Bun", "kind": "roti", "unit": "pcs", "price": 8000, "shape": "tray", "color": "#B9783F" },
+    { "id": "roti-sosis", "name": "Roti Sosis", "kind": "roti", "unit": "pcs", "price": 8000, "shape": "tray", "color": "#C98B4B" },
+    { "id": "roti-boy-cokelat", "name": "Roti Boy Cokelat", "kind": "roti", "unit": "pcs", "price": 8000, "shape": "tray", "color": "#6B3E26" },
+    { "id": "roti-boy-original", "name": "Roti Boy Original", "kind": "roti", "unit": "pcs", "price": 8000, "shape": "tray", "color": "#E3B572" },
+    { "id": "roti-boy-keju", "name": "Roti Boy Keju", "kind": "roti", "unit": "pcs", "price": 8000, "shape": "tray", "color": "#F0C75E" },
+    { "id": "kopi", "name": "Kopi", "kind": "bahan", "unit": "kg", "shape": "box", "color": "#4A2C1A" },
+    { "id": "susu", "name": "Susu", "kind": "bahan", "unit": "liter", "shape": "gallon", "color": "#F4F1EA" },
+    { "id": "gula-aren", "name": "Gula Aren", "kind": "bahan", "unit": "liter", "shape": "bottle", "color": "#7A4A1E" },
+    { "id": "sirup-caramel", "name": "Sirup Caramel", "kind": "bahan", "unit": "botol", "shape": "bottle", "color": "#C9822B" },
+    { "id": "bubuk-taro", "name": "Bubuk Taro", "kind": "bahan", "unit": "kg", "shape": "box", "color": "#9B7BB8" },
+    { "id": "teh", "name": "Teh", "kind": "bahan", "unit": "kotak", "shape": "box", "color": "#5E8C4A" },
+    { "id": "cup", "name": "Cup", "kind": "bahan", "unit": "pcs", "shape": "cup", "color": "#E9E3D8" }
+  ],
+  "drinkProduct": { "id": "minuman-dingin", "name": "Minuman Dingin", "price": 13000, "consumes": "cup" },
+  "drinkVariantsNote": "DATA DEMO: nama varian, takaran per gelas, dan warna isi gelas adalah CONTOH. Satuan mengikuti item stok (kopi kg, susu liter, gula aren liter, sirup botol, taro kg, teh kotak, cup pcs). Ganti dengan menu dan resep asli.",
+  "drinkVariants": [
+    { "id": "es-kopi-susu-aren", "name": "Es Kopi Susu Gula Aren", "color": "#A8693A", "recipe": { "kopi": 0.02, "susu": 0.15, "gula-aren": 0.03, "cup": 1 } },
+    { "id": "es-caramel-latte", "name": "Es Caramel Latte", "color": "#C98B3E", "recipe": { "kopi": 0.02, "susu": 0.15, "sirup-caramel": 0.04, "cup": 1 } },
+    { "id": "es-taro-latte", "name": "Es Taro Latte", "color": "#B59BD0", "recipe": { "bubuk-taro": 0.03, "susu": 0.2, "cup": 1 } },
+    { "id": "es-teh", "name": "Es Teh", "color": "#B8651F", "recipe": { "teh": 0.02, "cup": 1 } }
+  ],
+  "stocks": [
+    { "item": "banana-cake", "loc": "produksi", "qty": 28, "min": 12, "cap": 40, "hist": [30, 34, 22, 36, 31, 26, 28] },
+    { "item": "coffee-bun", "loc": "produksi", "qty": 9, "min": 12, "cap": 40, "hist": [24, 28, 20, 26, 18, 14, 9] },
+    { "item": "roti-sosis", "loc": "produksi", "qty": 22, "min": 12, "cap": 40, "hist": [20, 25, 30, 18, 27, 24, 22] },
+    { "item": "roti-boy-cokelat", "loc": "produksi", "qty": 0, "min": 12, "cap": 40, "hist": [18, 22, 15, 20, 10, 4, 0] },
+    { "item": "roti-boy-original", "loc": "produksi", "qty": 31, "min": 12, "cap": 40, "hist": [26, 30, 35, 28, 33, 29, 31] },
+    { "item": "roti-boy-keju", "loc": "produksi", "qty": 16, "min": 12, "cap": 40, "hist": [22, 19, 25, 21, 18, 20, 16] },
+
+    { "item": "banana-cake", "loc": "outlet", "qty": 12, "min": 8, "cap": 30, "hist": [14, 16, 10, 18, 15, 13, 12] },
+    { "item": "coffee-bun", "loc": "outlet", "qty": 6, "min": 8, "cap": 30, "hist": [16, 14, 12, 15, 10, 9, 6] },
+    { "item": "roti-sosis", "loc": "outlet", "qty": 15, "min": 8, "cap": 30, "hist": [12, 18, 14, 16, 17, 13, 15] },
+    { "item": "roti-boy-cokelat", "loc": "outlet", "qty": 3, "min": 8, "cap": 30, "hist": [15, 12, 10, 14, 9, 6, 3] },
+    { "item": "roti-boy-original", "loc": "outlet", "qty": 18, "min": 8, "cap": 30, "hist": [17, 20, 16, 19, 18, 15, 18] },
+    { "item": "roti-boy-keju", "loc": "outlet", "qty": 0, "min": 8, "cap": 30, "hist": [12, 10, 14, 9, 6, 3, 0] },
+
+    { "item": "kopi", "loc": "outlet", "qty": 3.5, "min": 1.5, "cap": 8, "hist": [6, 5.5, 5, 4.5, 4.2, 3.9, 3.5] },
+    { "item": "susu", "loc": "outlet", "qty": 14, "min": 6, "cap": 24, "hist": [20, 18, 22, 17, 16, 15, 14] },
+    { "item": "gula-aren", "loc": "outlet", "qty": 5, "min": 3, "cap": 12, "hist": [9, 8.5, 8, 7, 6.5, 5.5, 5] },
+    { "item": "sirup-caramel", "loc": "outlet", "qty": 2, "min": 3, "cap": 8, "hist": [7, 6, 5, 4, 3, 3, 2] },
+    { "item": "bubuk-taro", "loc": "outlet", "qty": 4, "min": 1.5, "cap": 6, "hist": [5.5, 5.2, 5, 4.8, 4.5, 4.2, 4] },
+    { "item": "teh", "loc": "outlet", "qty": 10, "min": 4, "cap": 20, "hist": [16, 15, 14, 13, 12, 11, 10] },
+    { "item": "cup", "loc": "outlet", "qty": 180, "min": 100, "cap": 500, "hist": [420, 380, 340, 300, 260, 220, 180] }
+  ],
+  "sales": {
+    "today": {
+      "transactions": 31,
+      "items": {
+        "banana-cake": 14, "coffee-bun": 11, "roti-sosis": 9, "roti-boy-cokelat": 12,
+        "roti-boy-original": 7, "roti-boy-keju": 5, "minuman-dingin": 18
+      }
+    },
+    "daily": {
+      "labels": ["H-6", "H-5", "H-4", "H-3", "H-2", "H-1", "Hari ini"],
+      "omzet": [512000, 548000, 603000, 489000, 702000, 741000, 656000],
+      "transactions": [24, 27, 29, 23, 34, 36, 31]
+    },
+    "monthly": {
+      "labels": ["B-5", "B-4", "B-3", "B-2", "B-1", "Bln ini"],
+      "omzet": [13900000, 14600000, 13200000, 15100000, 15800000, 6900000],
+      "transactions": [412, 438, 397, 451, 468, 203]
+    }
+  }
+}
