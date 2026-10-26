@@ -211,3 +211,7 @@
 @media (min-width: 1024px) { .tour-text { max-height: 18rem; } }
 .tour-card ul { margin: 6px 0 4px; padding-left: 1.1rem; list-style: disc; }
 .tour-card li { margin-bottom: 4px; font-size: 12px; line-height: 1.4; }
+
+
+/* ===== Panel di atas semua label scene (drei <Html> memakai z-index ±16,7 juta) ===== */
+.tour-card, .pov-card { z-index: 20000000 !important; }

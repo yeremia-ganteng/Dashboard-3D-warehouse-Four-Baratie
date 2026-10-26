@@ -49,7 +49,7 @@ export default function PovPanel() {
     : statusLine(cashier, tx);
 
   return (
-    <section className="card absolute left-3 top-3 z-20 w-[min(22rem,calc(100%-1.5rem))] p-3 text-sm shadow-card" aria-label={cashier ? `POV ${st?.name}` : 'POV Pelanggan'}>
+        <section className="card pov-card absolute left-3 top-3 z-20 w-[min(22rem,calc(100%-1.5rem))] p-3 text-sm shadow-card" aria-label={cashier ? `POV ${st?.name}` : 'POV Pelanggan'}>
       <div className="flex items-center justify-between gap-2">
         <h2 className="font-display text-base font-semibold">{cashier ? `POV ${st?.name}` : 'POV Pelanggan'}</h2>
         <span className="rounded-full bg-marun px-2 py-0.5 text-[10px] font-semibold text-cream">DATA DEMO</span>
