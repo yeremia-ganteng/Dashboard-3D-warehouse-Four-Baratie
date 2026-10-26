@@ -96,7 +96,7 @@ export default function CameraRig() {
       minDistance={5} maxDistance={90}
       minPolarAngle={0.05} maxPolarAngle={1.25}
       minAzimuthAngle={-1.2} maxAzimuthAngle={1.2}
-      onStart={() => { anim.current = null; stopTour(); }} // drag pengguna membatalkan animasi & tur
+      onStart={() => { anim.current = null; pauseTour(); }}// drag pengguna membatalkan animasi & tur
     />
   );
 }
